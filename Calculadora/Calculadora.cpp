@@ -17,41 +17,36 @@ int main(){
     int   n1 = (int)num1;
     float num2 = 0;
     int n2 = (int)num2;
+    float resultado = 0;
+    int r = (int) resultado;
     // we define our aitmethic operators
     char oper ='+';
 
     //the calculator may show this to the user
-    cout << "Digite el primer numero"<<endl;
-    cin >> num1; // read 1st number set by user 
+    cout << "Escriba la operacion a realizar bajo el formato a + b | a - b| a * b | a / b | a % b |"<<endl;
+    cin >> num1 >> oper >> num2;
 
-    cout << "Operacion" <<endl;
-    cin >> oper; // read the oper selected
-
-    cout <<"Segundo numero" << endl;
-    cin >> num2; // read 2nd number set by user
-
-    switch(oper) // to help calculator do the correct operation
+    cout << "$ ./ Calculadora"<<endl<<endl;
+    cout << "Este programa hace operaciones basicas entre dos numeros."<<endl;
+    cout << "Primer numero:" << " "<< num1<<endl; 
+    cout << "Operacion:" << " " << oper<<endl;
+    cout << "Segundo numero:" << " " <<num2<<endl<<endl;
+    cout << "Resultado:"<<endl;
+    cout << num1 <<" " << oper <<" " << num2<<" " << "=" <<" " << resultado <<endl;
+    
+        switch(oper) // to help calculator do the correct operation
     {
         case '+':
-            return num1 + num2;
+            resultado = num1 + num2;
         case '-':
-            return num1 - num2;
+            resultado = num1 - num2;
         case '*':
-            return num1 * num2;
+            resultado = num1 * num2;
         case '/':
-            return num1 / num2;
+            resultado = num1 / num2;
         case '%':
-            return n1 % n2;
+            resultado = n1 % n2;
 
     }
-    
-    cout << "$ ./ Calculadora";
-    cout << "Este programa hace operaciones basicas entre dos numeros.";
-    cout << "Primer numero:" << num1; 
-    cout << "Operacion:" << oper;
-    cout << "Segundo numero:" << num2;
-    cout << "Resultado:";
-    cout << num1 << oper << "=" << num2;
-    
     return 0;
 }
