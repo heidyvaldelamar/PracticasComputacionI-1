@@ -21,8 +21,12 @@ procedure calulate(n1,oper,n2)
     print "Segundo numero": n2
     print " ":
     print "Resultado:":
-    si oper = '+' print "n1 + n2" "=" n1+n2
-    sino si oper = '-' print "n1 + n2" "=" n1+n2
+    si oper = '+' print "n1 + n2" "=" n1 + n2:
+    si no, si oper = '-' print "n1 - n2" "=" n1 - n2:
+    si no, si oper = '*' print "n1 * n2" "=" n1 * n2:
+    si no, si oper = '/' print "n1 / n2" "=" n1 / n2:
+    si no, si oper = '%' print "n1 % n2" "=" n1 % n2:
+    sino print "operador no valido":
 return 0;
 */
 
