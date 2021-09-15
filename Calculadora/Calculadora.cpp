@@ -48,21 +48,24 @@ int main ()
     cin >> num2;
     cout << " " << endl << endl; 
     cout << "Resultado:" << endl;
-    if(oper = '+'){
+    if(oper == '+')
         cout << num1 << " " << oper << " " << num2 << " " << "=" <<" " << num1 + num2 << endl;
-    }
-    if(oper = '-'){
+    
+    else if(oper == '-')
         cout << num1 << " " << oper << " " << num2 << " " << "=" <<" " << num1 - num2 << endl;
-    }
-    if(oper = '*'){
+        
+    else if(oper == '*')
         cout << num1 << " " << oper << " " << num2 << " " << "=" <<" " << num1 * num2 << endl;
-    }
-    if(oper = '/'){
+        
+    else if(oper == '/')
         cout << num1 << " " << oper << " " << num2 << " " << "=" <<" " << num1 / num2 << endl;
-    }
-    if(oper = '%'){
-        cout << num1 << " " << oper << " " << num2 << " " << "=" <<" " << n1 % n2 << endl;
-    }
+        
+    else if(oper == '%')
+        cout << num1 << " " << oper << " " << num2 << " " << "=" <<" " << (int)num1 % (int)num2 << endl;
+        
+    else
+        cout << " operador no valido"<< endl;
+        
     return 0;
     
 }
