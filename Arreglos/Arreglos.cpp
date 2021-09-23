@@ -64,13 +64,16 @@ int main()
 array<float, LEN>LlenarArreglo()
     {
         for (int i = 0; i < LEN; i++){
+            float arr;
             cin >> arr[LEN];
         }
+        return (arr);
     }
 
 // MULTIPLY EACH ELEMENT OF 'arreglo' ARRAY BY FACTOR 'mult'
 array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo)
     {
+        float arr, multiplo
         arr = arreglo * multiplo;
         return (arr);
     }
@@ -78,6 +81,7 @@ array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo)
 // ADD EACH ELEMENT OF 'arr1' & 'arr2' AND RETURN RESULT ARRAY
 array<float, LEN> SumarArreglos(array<float, LEN> arr, array <float, LEN> arr2)
     {
+        float arr, arr2;
         arr = arr + arr2;
         return (arr);
     }
