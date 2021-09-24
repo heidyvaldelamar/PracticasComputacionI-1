@@ -24,12 +24,12 @@ int main()
     char decision;
     array<float, LEN> arr = { 0 }; // Inicializamos el arreglo con ceros como buena práctica
     arr = LlenarArreglo(); // Solicitamos al usuario que llene un arreglo y lo asignamos a nuestro arreglo principal
-    cout << "Operación: ";
+    cout << "Operacion: "; // We removed the accent
     cin >> decision;
     // Si la operación no es '+' de suma, o '*' de multiplicación, seguimos preguntando al usuario.
     while (decision != '+' && decision != '*')
     {
-        cout << "Operación: ";
+        cout << "Operacion: "; // We removed the accent
         cin >> decision;
     }
     // Si se ingresa la multiplicación
@@ -61,17 +61,29 @@ void ImprimirArreglo(array<float, LEN> arreglo)
 // Llena un arreglo de tamaño LEN y lo "regresa" como resultado
 array<float, LEN> LlenarArreglo()
 {
-    // TODO
+    array<float, LEN> arreglo {0}; // We declare 'arreglo' and start it in 0
+    for (int i = 0; i < arreglo.size(); i++){ //we want i to be smaller than the size of 'arreglo' array
+        cout << " Valor elemento [" << i << "]: "; // to show and input each element of the array
+        cin >> arreglo[i];
+    }
+    return arreglo;
 }
 
 // Multiplica cada elemento del arreglo 'arreglo' por el factor 'mult'
 array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo)
 {
-    // TODO
+    for(int i = 0; i < arreglo.size(); i++){
+        arreglo[i] *= multiplo; // we combine * & asignation
+    }
+    return arreglo;
 }
 
 // Suma elemento a elemento los arreglos 'arr1' y 'arr2' y regresa el arreglo resultante
 array<float, LEN> SumarArreglos(array<float, LEN> arr1, array<float, LEN> arr2)
 {
-    // TODO
+    array<float, LEN> arreglo {0}; // We have to declare 'arreglo' because it is not shown above // we start it on 0
+    for(int i = 0; i < arreglo.size(); i++){
+        arreglo[i] = arr1[i] + arr2[i]; // Can't be done with +=; 'case returns only arr2
+    }
+    return arreglo;
 }
