@@ -8,89 +8,70 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 #include <iostream>
 #include <array>
 
-#define LEN 3 // NUMBER OF ELEMENTS WITHIN THE ARRAYS
+#define LEN 3 //Número de elementos en los arreglos
 
-using namespace std; //TO SIMPLIFY FUNCITON CALLING
+// Añadir std para fácil llamado de funciones
+using namespace std;
 
-////////////////////////////////////////////////// VARIABLE DECLARATION ///////////////////////////////////////////////////////////////////////
-
+// Declaración de funciones
 void ImprimirArreglo(array<float, LEN> arreglo);
 array<float, LEN> LlenarArreglo(void);
-array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float factor);
-array<float, LEN> SumarArreglos(array<float, LEN> arr, array<float, LEN>arr2);
-
-///////////////////////////////////////////////////// MAIN FUNCTION ///////////////////////////////////////////////////////////////////////////
+array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo);
+array<float, LEN> SumarArreglos(array<float, LEN> arr1, array<float, LEN> arr2);
 
 int main()
 {
     char decision;
-    array<float, LEN> arr = { 0 };  // START THE ARRAY WITH 0
-    arr = LlenarArreglo(); // ASKING THE USER TO FILL AN ARRAY; WE ASIGN IT TO OUR MAIN ARRAY
+    array<float, LEN> arr = { 0 }; // Inicializamos el arreglo con ceros como buena práctica
+    arr = LlenarArreglo(); // Solicitamos al usuario que llene un arreglo y lo asignamos a nuestro arreglo principal
     cout << "Operación: ";
     cin >> decision;
-    // FOR WHEN THE USER CHOOSES OTHER OPERATOR RATHER THAN '+' OR '*', WE ASK THE USER FOR IT
-    while(decision != '+' && decision != '*')
+    // Si la operación no es '+' de suma, o '*' de multiplicación, seguimos preguntando al usuario.
+    while (decision != '+' && decision != '*')
     {
         cout << "Operación: ";
         cin >> decision;
     }
-    // IF MULTIPLICATION
-    if (decision == '*'){
+    // Si se ingresa la multiplicación
+    if (decision == '*') {
         float factor;
         cout << "Factor: ";
-        cin >> factor; // ASKING FOT THE FACTOR TO MULTIPLY
-        arr = MultiplicarArreglo(arr, factor); // MAIN ARRAY x FACTOR; ASIGNING THE RESULT TO MAIN ARRAY
+        cin >> factor;  // Pedimos el factor a multiplicar
+        arr = MultiplicarArreglo(arr, factor); // Multiplicamos nuestro arreglo principal por el factor y el resultado lo asignamos a nuestro arreglo principal.
     }
-    // IF ADDITION
-    else if(decision == '+'){
-        array <float, LEN> arr1 = arr;
-        array<float, LEN> arr2 = { 0 }; // CREATION OF 2ND ARRAY, STARTED IN 0
-        arr2 = LlenarArreglo(); // WE AKS THE USER TO FILL THE 2ND ARRAY; WE ASIGN IT TO OUR NEW ARRAY
-        arr = SumarArreglos(arr1, arr2); // WE ADD BOTH ARRAYS ELEMENT TO ELEMENT; WE REASIGN THE RESULT TO MAIN ARRAY
-        }
+    // Si se ingresa la suma
+    else if (decision == '+') {
+        array<float, LEN> arr2 = {0}; // Creamos el segundo arreglo y lo inicializamos en ceros
+        arr2 = LlenarArreglo(); // Pedimos al usuario que llene otro arreglo y lo asignamos a nuetsro nuevo arreglo
+        arr = SumarArreglos(arr, arr2); // Sumamos ambos arreglos elemento a elemento, y reasignamos el resutlado a nuestro arreglo principal
+    }
     cout << "Resultado: ";
-    ImprimirArreglo(arr); // WE PRINT THE RESULT OF THE OP. OVER THE MAIN ARRAY
-    return 0;
+    ImprimirArreglo(arr); // Imprimimos el resultado de la operación sobre el arreglo principal
+    return 0; // Indicamos que salimos del programa con éxito
 }
-//////////////////////////////////////////////////////// SECONDARY FUNCTIONS /////////////////////////////////////////////////////////////////
-// PRINT THE ELEMENTS OF 'arreglo' ARRAY WITH AN SPACE BETWEEN ELEMENTS
-    void ImprimirArreglo(array<float, LEN> arreglo)
-    {
-        for(int i = 0; i < LEN; i++)
-            cout << arreglo[i] << ' ';
-        cout << '\n';
-    }
 
-// FILL A LENGTH = LEN ARRAY AND RETURN IT AS RESULT
-array<float, LEN>LlenarArreglo(void)
-    {
-        for (float i = 0; i < LEN; i++){
-            array<float, LEN> arr {0};
-            cin >> arr[i];
-        }
-        
-    }
+// Imprime los elementos del arreglo 'arreglo' separando cada elemento con un espacio en blanco
+void ImprimirArreglo(array<float, LEN> arreglo)
+{
+    for (int i = 0; i < LEN; i++)
+        cout << arreglo[i] << ' ';
+    cout << '\n';
+}
 
-// MULTIPLY EACH ELEMENT OF 'arreglo' ARRAY BY FACTOR 'mult'
-array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float factor)
-    {
-        for (int i = 0; i < LEN; i++){
-            float factor = 0;
-            array<float, LEN> arr {0};
-            arreglo[i]= arr[i] * factor;
-        }
-        return arreglo;    
-    }
+// Llena un arreglo de tamaño LEN y lo "regresa" como resultado
+array<float, LEN> LlenarArreglo()
+{
+    // TODO
+}
 
-// ADD EACH ELEMENT OF 'arr1' & 'arr2' AND RETURN RESULT ARRAY
-array<float, LEN> SumarArreglos(array<float, LEN> arr, array <float, LEN> arr2)
-    {
-         
-        for(int i = 0; i < LEN ; i++){
-            for (int j = 0; j < LEN; j++){
-                arr[i] = arr[i] + arr2[j];
-            }
-            
-        }
-        return (arr);
-    }
+// Multiplica cada elemento del arreglo 'arreglo' por el factor 'mult'
+array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo)
+{
+    // TODO
+}
+
+// Suma elemento a elemento los arreglos 'arr1' y 'arr2' y regresa el arreglo resultante
+array<float, LEN> SumarArreglos(array<float, LEN> arr1, array<float, LEN> arr2)
+{
+    // TODO
+}
