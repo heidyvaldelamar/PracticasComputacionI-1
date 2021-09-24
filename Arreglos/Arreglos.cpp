@@ -17,7 +17,7 @@ using namespace std; //TO SIMPLIFY FUNCITON CALLING
 void ImprimirArreglo(array<float, LEN> arreglo);
 array<float, LEN> LlenarArreglo(void);
 array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo);
-array<float, LEN> SumarArreglos(array<float, LEN> arr, array<float, LEN>arr2);
+array<float, LEN> SumarArreglos(array<float, LEN> arr1, array<float, LEN>arr2);
 
 ///////////////////////////////////////////////////// MAIN FUNCTION ///////////////////////////////////////////////////////////////////////////
 
@@ -43,9 +43,10 @@ int main()
     }
     // IF ADDITION
     else if(decision == '+'){
+        array <float, LEN> arr1 = arr;
         array<float, LEN> arr2 = { 0 }; // CREATION OF 2ND ARRAY, STARTED IN 0
         arr2 = LlenarArreglo(); // WE AKS THE USER TO FILL THE 2ND ARRAY; WE ASIGN IT TO OUR NEW ARRAY
-        arr = SumarArreglos(arr, arr2); // WE ADD BOTH ARRAYS ELEMENT TO ELEMENT; WE REASIGN THE RESULT TO MAIN ARRAY
+        arr = SumarArreglos(arr1, arr2); // WE ADD BOTH ARRAYS ELEMENT TO ELEMENT; WE REASIGN THE RESULT TO MAIN ARRAY
         }
     cout << "Resultado: ";
     ImprimirArreglo(arr); // WE PRINT THE RESULT OF THE OP. OVER THE MAIN ARRAY
@@ -63,25 +64,34 @@ int main()
 // FILL A LENGTH = LEN ARRAY AND RETURN IT AS RESULT
 array<float, LEN>LlenarArreglo()
     {
-        for (int i = 0; i < LEN; i++){
-            float arr;
-            cin >> arr[LEN];
+        for (float i = 0; i < LEN; i++){
+            array<float, LEN>arr{0};
+            cin >> arr[i];
         }
         return (arr);
     }
 
 // MULTIPLY EACH ELEMENT OF 'arreglo' ARRAY BY FACTOR 'mult'
-array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo)
+array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float factor)
     {
-        float arr, multiplo
-        arr = arreglo * multiplo;
-        return (arr);
+        for (int i = 0; i < LEN; i++){
+            float factor = 0;
+            array<float, LEN> arr {0};
+            arreglo[i]= arr[i] * factor;
+        }
+        return arreglo;    
     }
 
 // ADD EACH ELEMENT OF 'arr1' & 'arr2' AND RETURN RESULT ARRAY
 array<float, LEN> SumarArreglos(array<float, LEN> arr, array <float, LEN> arr2)
     {
-        float arr, arr2;
-        arr = arr + arr2;
+        array <float, LEN> arr2 {0};
+        
+        for(int i = 0; i < LEN ; i++){
+            for (int j = 0; j < LEN; j++){
+                arr[i] = arr[i] + arr2[j];
+            }
+            
+        }
         return (arr);
     }
