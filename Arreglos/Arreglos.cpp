@@ -16,8 +16,8 @@ using namespace std; //TO SIMPLIFY FUNCITON CALLING
 
 void ImprimirArreglo(array<float, LEN> arreglo);
 array<float, LEN> LlenarArreglo(void);
-array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float multiplo);
-array<float, LEN> SumarArreglos(array<float, LEN> arr1, array<float, LEN>arr2);
+array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float factor);
+array<float, LEN> SumarArreglos(array<float, LEN> arr, array<float, LEN>arr2);
 
 ///////////////////////////////////////////////////// MAIN FUNCTION ///////////////////////////////////////////////////////////////////////////
 
@@ -62,13 +62,13 @@ int main()
     }
 
 // FILL A LENGTH = LEN ARRAY AND RETURN IT AS RESULT
-array<float, LEN>LlenarArreglo()
+array<float, LEN>LlenarArreglo(void)
     {
         for (float i = 0; i < LEN; i++){
-            array<float, LEN>arr{0};
+            array<float, LEN> arr {0};
             cin >> arr[i];
         }
-        return (arr);
+        
     }
 
 // MULTIPLY EACH ELEMENT OF 'arreglo' ARRAY BY FACTOR 'mult'
@@ -85,8 +85,7 @@ array<float, LEN> MultiplicarArreglo(array<float, LEN> arreglo, float factor)
 // ADD EACH ELEMENT OF 'arr1' & 'arr2' AND RETURN RESULT ARRAY
 array<float, LEN> SumarArreglos(array<float, LEN> arr, array <float, LEN> arr2)
     {
-        array <float, LEN> arr2 {0};
-        
+         
         for(int i = 0; i < LEN ; i++){
             for (int j = 0; j < LEN; j++){
                 arr[i] = arr[i] + arr2[j];
