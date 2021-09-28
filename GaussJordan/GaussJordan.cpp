@@ -87,9 +87,12 @@ No regresa ningún valor.
 template <typename matriz>
 void ImprimirSolucion(matriz & miMatriz)
 {
+    int variables = miMatriz.size();
     cout << "Solucion:" <<endl;
-    for(int i = 0; i <miMatriz.size(); i++){
-        cout <<"x0 = "<< miMatriz[i][j] << endl;
+    for(int i = 0; i < variables; i++){
+        for(int j = 0; j < variables + 1; i++){
+            cout <<"x0 = "<< miMatriz[i][j] << endl;
+        }
     }
     return 0;
 }
@@ -101,6 +104,40 @@ No regresa ningún valor.
 template <typename matriz>
 void GaussJordan(matriz & miMatriz)
 {
-    //TODO
+    double mayor; // variable que para guardar el mayor valor de la columna i
+    int indice; // indice del mayor valor, indice de 'mayor'
+    double aux; // auxiliar
+    double pivote; // pivote
+
+    // iniciamos el ciclo for
+    int variables = miMatriz.size();
+    // recorramos la matriz reducida
+    for(int i = 0; i < variables; i++ ){
+        mayor = abs(miMatriz[i][i]);
+        indice = i;
+        // recorramos la columna j
+        // encontremos el indice mayor
+        for(int j = 0; j < variables + 1; j++){
+            if(mayor < abs(miMatriz[j][i])){
+                mayor = abs(miMatriz[j][i]);
+                indice = j;
+            }
+        }
+        // cambiemos las filas
+        if(j != indice){
+            for(int k = 0; k < variables + 1; k++){
+                aux = miMatriz[i][k];
+                miMatriz[i][k] = miMatriz[indice][k];
+                miMatriz[indice][k] = aux;
+            }
+        }
+        // si es igual a 0
+        if(miMatriz[i][i] == 0){
+            cout << "No tiene solucion :( " << endl;
+        }
+        else{
+            // TODO
+        }
+    }
 }
 
