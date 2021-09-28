@@ -71,7 +71,7 @@ void intercambiarFilas(int f1, int f2){ // cambio elemento por elemento
 void imprimirMatriz(void){
     for (int i = 0; i < filas; i++){
         for(int j = 0; j < cols; j++){
-            cout << A[i][j] << "  " ;
+            cout << A[i][j] << " " ; 
             cout << endl;
         }
     }

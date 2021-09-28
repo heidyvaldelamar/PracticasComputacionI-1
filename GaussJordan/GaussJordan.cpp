@@ -87,7 +87,11 @@ No regresa ningún valor.
 template <typename matriz>
 void ImprimirSolucion(matriz & miMatriz)
 {
-    //TODO
+    cout << "Solucion:" <<endl;
+    for(int i = 0; i <miMatriz.size(); i++){
+        cout <<"x0 = "<< miMatriz[i][j] << endl;
+    }
+    return 0;
 }
 
 /*
