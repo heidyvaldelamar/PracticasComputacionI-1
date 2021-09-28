@@ -37,7 +37,9 @@ int main(){
             }
             // Realizar eliminacion
             // TODO:
-            // 1) multiplicar
+            // 1) multiplo
+            // 2) Efectuar operacion (tmp)
+            // 3) Escribir resultado
             
         }
     }
