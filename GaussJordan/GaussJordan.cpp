@@ -90,9 +90,7 @@ void ImprimirSolucion(matriz & miMatriz)
     int variables = miMatriz.size();
     cout << "Solucion:" <<endl;
     for(int i = 0; i < variables; i++){
-        for(int j = 0; j < variables + 1; i++){
-            cout <<"x" << i + 1 << "="<< miMatriz[i][j] << endl;
-        }
+        cout <<"x" << i + 1 << "="<< miMatriz[i][variables] << endl;
     }
 }
 
@@ -116,7 +114,7 @@ void GaussJordan(matriz & miMatriz)
         indice = i;
         // recorramos la columna j
         // encontremos el indice mayor
-        for(int j = 0; j < variables + 1; j++){
+        for(int j = i + 1; j < variables; j++){
             if(mayor < abs(miMatriz[j][i])){
                 mayor = abs(miMatriz[j][i]);
                 indice = j;
@@ -124,7 +122,7 @@ void GaussJordan(matriz & miMatriz)
         }
         // cambiemos las filas
         if(i != indice){
-            for(int k = 0; k < variables; k++){
+            for(int k = 0; k < variables + 1; k++){
                 aux = miMatriz[i][k];
                 miMatriz[i][k] = miMatriz[indice][k];
                 miMatriz[indice][k] = aux;
