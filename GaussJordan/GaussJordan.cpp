@@ -76,7 +76,7 @@ void ImprimirMatriz(matriz & miMatriz)
         cout << "[ ";
         for (int j = 0; j < variables + 1; j++)
             cout << miMatriz[i][j] << '\t';
-        cout << "]\n";
+        cout << "]\n" << endl;
     }
 }
 
