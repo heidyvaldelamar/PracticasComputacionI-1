@@ -91,10 +91,9 @@ void ImprimirSolucion(matriz & miMatriz)
     cout << "Solucion:" <<endl;
     for(int i = 0; i < variables; i++){
         for(int j = 0; j < variables + 1; i++){
-            cout <<"x0 = "<< miMatriz[i][j] << endl;
+            cout <<"x" << i + 1 << "="<< miMatriz[i][j] << endl;
         }
     }
-    return 0;
 }
 
 /*
@@ -124,8 +123,8 @@ void GaussJordan(matriz & miMatriz)
             }
         }
         // cambiemos las filas
-        if(j != indice){
-            for(int k = 0; k < variables + 1; k++){
+        if(i != indice){
+            for(int k = 0; k < variables; k++){
                 aux = miMatriz[i][k];
                 miMatriz[i][k] = miMatriz[indice][k];
                 miMatriz[indice][k] = aux;
@@ -136,7 +135,22 @@ void GaussJordan(matriz & miMatriz)
             cout << "No tiene solucion :( " << endl;
         }
         else{
-            // TODO
+            // reccoremos la fila
+            for(int k = 0; k < variables; k++){
+                if (k != i){
+                    pivote = -miMatriz[k][i];
+                    // recorremos los elementos de la fila
+                    for(int l = i; l < variables + 1; l++){
+                        miMatriz[k][l] = miMatriz[k][l] + pivote * miMatriz[i][l] / miMatriz[i][i];
+                    }
+                }
+                else{
+                    pivote = miMatriz[i][i];
+                    for(int l = i; l < variables + 1; l++){
+                        miMatriz[k][l] = miMatriz[k][l] / pivote;
+                    }
+                }
+            }
         }
     }
 }
