@@ -26,5 +26,16 @@ double base, altura;
 
 
 int main (){
+
+    Triangle t1, t2;
+    // Traingulo 1
+    t1.setAltura(2.5);
+    t1.setBase(4.5);
+    cout << "El area de t1 es: "<< t1.getArea() << endl;
+
+    // Traingulo 2
+    t2.setAltura(3.5);
+    t2.setBase(5.5);
+    cout << "El area de t1 es: "<< t2.getArea() << endl;
     return 0;
 }
