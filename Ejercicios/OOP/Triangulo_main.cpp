@@ -50,22 +50,26 @@ int main (){
    double maxArea = -9999999999;
 
    for(int i = 0; i<10; i++){
-       arrT[i].setBase((i+1) * 3.5);
-       arrT[i].setAltura((i+1) * 5.6);
+
+       //Pedir datos al ususario de B y A
+       double base, altura;
+       cout << "Ingresa la base y altura del triangulo " << i << endl;
+       cin >> base >> altura
+       arrT[i].setBase(base);
+       arrT[i].setAltura(altura);
        double currentArea = arrT[i].getArea();
 
        // Triangulo mas pequeno
        if(currentArea < minArea){
         minArea = currentArea;
-        minT = i + 1; 
-       }
+        minT = i + 1;
+       }    
        // Triangulo mas grande
        if(currentArea > maxArea){
         maxArea = currentArea;
         maxT = i + 1; 
        }
-    
-    }
+   }
     cout << "El triangulo mas pequeño es: " << minT <<" y tiene un area de: "<< minArea << endl;
     cout << "El triangulo mas grande es: " << maxT <<" y tiene un area de: "<< maxArea << endl;
 
