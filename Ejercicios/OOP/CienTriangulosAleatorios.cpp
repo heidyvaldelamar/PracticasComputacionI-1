@@ -58,7 +58,7 @@ int main (){
 
     int maxT{0}, minT{0};
     double minArea = 999999;
-    double maxArea = 999999;
+    double maxArea = -999999;
 
     for (int i = 0; i < 100; i++){
         T[i].run();
