@@ -13,7 +13,7 @@ class Triangle {
             // Inicializar vértices
             initRandomVertex (V1);
             initRandomVertex (V2);
-            initRandomVertex (V3;
+            initRandomVertex (V3);
 
         }
         void initRandomVertex(array<int, 2> &V){
@@ -24,7 +24,7 @@ class Triangle {
     private:
         array<int, 2> V1 {0};
         array<int, 2> V2 {0};
-        array<int, 2> v3 {0};
+        array<int, 2> V3 {0};
 
 
 };
