@@ -18,7 +18,7 @@ class Triangle {
             initRandomVertex (V3);
 
         }
-        double calculateArea(){
+        double getArea(){
             double base = xmax - xmin;
             double altura = ymax - ymin;
             return (base * altura) / 2;
@@ -55,9 +55,27 @@ int main (){
     srand((int) time (0)); // inicializar la semilla
     
     array <Triangle, 100> T;
+
+    int maxT{0}, minT{0};
+    double minArea = 999999;
+    double maxArea = 999999;
+
     for (int i = 0; i < 100; i++){
         T[i].run();
+        double area = T[i].getArea();
+
+        // Triángulo más pequeño
+        if(area < minArea){
+            minArea = area;
+            minT = i + 1;
+        }
+        if (area > maxArea){
+            maxArea = area;
+            maxT = i + 1;
+        }
     }
-    
+
+    cout << "El triangulo mas chico es: " << minT << " y tiene un area de: "<< minArea <<endl;
+    cout << "El tiriangulo mas grande es: " << maxT << " y tiene un area de: "<< maxArea <<endl;   
     return 0;
 }
