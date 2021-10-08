@@ -5,5 +5,9 @@
 class PH
 {
     public:
-        double CalculaPH(double VolSusAg, double MolSusAg, double VolAg);
+        double CalculaPH(double MolSusAg, double VolSusAg, double VolAg);
+    private:
+        double VolSusAg = 0.0;
+        double MolSusAg = 0.0;
+        double VolAg = 0.0;
 };
