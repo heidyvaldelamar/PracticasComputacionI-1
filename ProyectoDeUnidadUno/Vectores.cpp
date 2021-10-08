@@ -33,6 +33,20 @@ int main(){
 int main(){
     vector<int> B(5); // vector vacio (falta metodo)
     cout << "El tamano de B es: " << B.size() <<endl;
+    imprimirVector(B);
+    B.push_back(2);
+    imprimirVector(B);
+
+    const int long n = 999999999;
+    for(int i=0; i < n; i++){
+        B.push_back(i);
+    }
 
     return 0;
+}
+
+void imprimirVector(vector<int>B){ // completar
+    for(int i=0;i <B.size(); i++){
+        cout<<B[i]<<endl;
+    }
 }
