@@ -4,7 +4,7 @@
 // Para la función pH
 
 #include "PH.h"
-#include<math.h>
+#include<math.h> // para poder sacar el logaritmo
 
 double CalculaPH(double VolSusAg, double MolSusAg, double VolAg)
 {
