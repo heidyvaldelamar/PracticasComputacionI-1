@@ -1,7 +1,7 @@
 /*
 */
 
-// Calse Iso
+// Clase Iso
 #include <iostream>
 using namespace std;
 
