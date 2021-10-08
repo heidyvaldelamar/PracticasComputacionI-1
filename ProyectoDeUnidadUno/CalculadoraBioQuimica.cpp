@@ -10,6 +10,10 @@ using namespace std;
 
 int main(){
 
+    double pka1 = 0.0;
+    double pka2 = 0.0;
+    double pI = 0.0;
+
     cout << "Calculadora de Bioquimica" << endl << endl;
     cout << "Seleccione un procedimiento" << endl;
     cout << "1 : Calcular pH" << endl;
