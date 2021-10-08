@@ -10,6 +10,7 @@ using namespace std;
 
 int main(){
 
+    char op = '1';
     double pka1 = 0.0;
     double pka2 = 0.0;
     double pI = 0.0;
@@ -18,8 +19,11 @@ int main(){
     cout << "Seleccione un procedimiento" << endl;
     cout << "1 : Calcular pH" << endl;
     cout << "2 : Especie con mayor presencia" << endl;
-    cout << "3 : Calcular PM de proteína" << endl;
-    cout << "4 : Calcular punto isoeléctrico" << endl;
+    cout << "3 : Calcular PM de proteina" << endl;
+    cout << "4 : Calcular punto isoelectrico" << endl << endl;
+    cout << "Procedimento: ";
+    cin >> op;
+
 
 
 
