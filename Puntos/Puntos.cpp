@@ -4,6 +4,7 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
   date: OCT 12 2021
 */
 #include <iostream>
+#include "corecrt_math.h"
 #include <array>
 
 // Incluimos nuestro encabezado con la definición de la clase Punto2D

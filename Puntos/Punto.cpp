@@ -12,31 +12,34 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 using namespace std;
 
 float Punto2D::SetPosicion(float x, float y){
-  //TODO
+  xInicial = x;
+  yInicial = y;
 }
 
 float Punto2D::Trasladar(float temp1, float temp2){
-  float tras[2] = {x + temp1 , y + temp2};
-  cout << "Posición final: \n";
-  cout << tras;
+  array <float, 2> T = {0.0};
+  T[0]= (xInicial + temp1);
+  T[1]= (yInicial + temp2);
 }
 
 float Punto2D::RotarRespectoAlOrigen(float temp1){
-  float rot[2]={(x * cos(temp1))-(y * sin(temp1)), (x * sin(temp1)) + (y * cos(temp1))};
-  cout << "Posicion final:\n";
-  cout << rot;
+  array<float, 2> T = {0.0};
+  T[0]=(xInicial * cos(temp1))-(yInicial * sin(temp1));
+  T[0]=(xInicial * sin(temp1)) + (yInicial * cos(temp1));
 }
 
 float Punto2D::Escalar(float temp1, float temp2){
-  //TODO
+  array<float, 2> T = {0.0};
+  T[0] = (xInicial * temp1);
+  T[1] = (yInicial * temp2);
 }
 
-float Punto2D::GetX(){
-  //TODO
+float Punto2D::GetX() const{
+  return T[0];
 }
 
-float Punto2D::GetY(){
-  //TODO
+float Punto2D::GetY()const{
+  return T[1];
 }
 
 
