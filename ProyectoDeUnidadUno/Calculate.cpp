@@ -8,8 +8,8 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 #include "PH.h"
 // libraries
 #include<iostream>
-#include<cmath>
 #include<math.h>
+#include<stdio.h>
 
 using namespace std;
 
@@ -19,22 +19,28 @@ float PH::setValues(float x){
 }
 
 float PH::CalculatePH(float temp1, float temp2, float temp3){
-   // pH = - log(((MolSusAg * VolSusAg) / (VolSusAg + VolAg)) + 0.0000001)
-    float result = - log(((temp1 * temp2) / (temp2 + temp3)) + 0.0000001);
+   // result = - log10(((MolSusAg * VolSusAg) / (VolSusAg + VolAg)) + 0.0000001)
+   // - (log10) did not work 
+    a = temp1 * temp2;
+    b = temp2 + temp3;
+    c = a / b;
+    
+    result = c;
+
     return 0;
 }
 
 float PH::DominantSus(float temp1, float temp2){
-    result = temp1 - temp2;
-    if(result > 0){
-        result = temp1;
+    result = (-(temp1)) - (-(temp2));
+    if(result == 0){
+        cout << "Ambas especies estan en equilibrio" <<endl;
     }
     else{
-        if(result < 0){
-            result = temp2;
+        if(result < 0 ){
+            cout << "La especie desprotonada predomina"<<endl;
         }
         else{
-            result = 0;
+            cout << "La especie protonada predomina"<<endl;
         }
     }
     return 0;

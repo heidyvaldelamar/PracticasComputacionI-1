@@ -9,7 +9,7 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 class PH
 {
     public:
-        float result;
+        float result, a, b, c;
         float setValues(float x);
         float CalculatePH(float temp1, float temp2, float temp3);
         float DominantSus(float temp1, float temp2);

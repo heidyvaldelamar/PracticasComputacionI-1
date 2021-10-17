@@ -9,12 +9,13 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 #include <array>
 
 // Headers
+#include "PH.h"
 
 using namespace std;
 
 // Function declaration
 void askValues(float& x, float& y);
-char ChooseOp();
+char AskOp();
 
 int main(){
   // Our Class Instance
@@ -32,15 +33,15 @@ int main(){
         cout << "Ingrese los siguientes datos:" << endl;
         cout << "Molaridad de la sustancia agregada:";
         cin >> temp1;
-        cout << "Volumen de la sustancia agregada:";
+        cout << "Volumen de la sustancia agregada (L):";
         cin >> temp2;
-        cout << "Volumen del agua:"
+        cout << "Volumen del agua (L):";
         cin >> temp3;
       // We calculate pH
         myPH.CalculatePH(temp1,temp2,temp3);
         break;
       case '2':
-        cout << "Constante de acidez de la sustancia (ka): ";
+        cout << "Constante de acidez de la sustancia (pka): ";
         cin >> temp1;
         cout << "pH: ";
         cin >> temp2;
@@ -54,13 +55,12 @@ int main(){
         myPH.IsoPoint(temp1, temp2);
         break;
     }
-    cout << "Resultado:\n";
-    cout << myPH.GetResult();
+    cout << "Resultado: "<< myPH.GetResult();
     return 0;
 }
 
 
-char PedirOperacion()
+char AskOp()
 {
   char op;
   do{
@@ -74,3 +74,5 @@ char PedirOperacion()
   }while (op != '1' && op !='2' && op !='3');
   return op;
 }
+
+//g++ CalculadoraBioQuimica.cpp Calculate.cpp PH.h -o CalculadoraBioQuimica;.\CalculadoraBioQuimica
