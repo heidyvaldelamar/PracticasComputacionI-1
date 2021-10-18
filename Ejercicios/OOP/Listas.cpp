@@ -4,6 +4,13 @@ e-mail:
   date:
 */
 
+#include<iostream>
+
+struct list{
+    int actual;
+    int *siguiente;
+};
+
 using namespace std;
 
 
