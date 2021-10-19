@@ -25,7 +25,7 @@ float PH::CalculatePH(float temp1, float temp2, float temp3){
     b = temp2 + temp3;
     c = a / b;
     
-    result = c;
+    result = (log10(c)) * (-1);
 
     return 0;
 }
