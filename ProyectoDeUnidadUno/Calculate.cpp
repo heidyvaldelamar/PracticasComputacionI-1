@@ -8,8 +8,8 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 #include "PH.h"
 // libraries
 #include<iostream>
-#include<math.h>
-#include<stdio.h>
+#include<math.h> //log10
+#include<stdio.h> // standard header in C and derivates
 
 using namespace std;
 
@@ -24,14 +24,14 @@ float PH::CalculatePH(float temp1, float temp2, float temp3){
     a = temp1 * temp2;
     b = temp2 + temp3;
     c = a / b;
-    
+    // doing it step by step works!
     result = (log10(c)) * (-1);
 
     return 0;
 }
 
 float PH::DominantSus(float temp1, float temp2){
-    result = (-(temp1)) - (-(temp2));
+    result = (-(temp1)) - (-(temp2)); // we substract the exponents at which 10 is elevated to 
     if(result == 0){
         cout << "Ambas especies estan en equilibrio" <<endl;
     }
