@@ -14,13 +14,13 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 using namespace std;
 
 // Function declaration
-void askValues(float& x, float& y);
+// void askValues(float& x, float& y); <- DW
 char AskOp();
 
 int main(){
   // Our Class Instance
     PH myPH;
-    float x = 0, y = 0;
+    // float x = 0, y = 0; <- DW / askValues()
     float temp1 = 0, temp2 = 0, temp3 = 0;
     char option;
 
@@ -64,7 +64,8 @@ char AskOp()
 {
   char op;
   do{
-    cout << "Calculadora de Bioquimica" << endl << endl;
+    cout << "      Calculadora de Bioquimica      " << endl;
+    cout << "-------------------------------------" << endl <<endl;
     cout << "Seleccione un procedimiento" << endl;
     cout << "1 : Calcular pH" << endl;
     cout << "2 : Especie con mayor presencia" << endl;
