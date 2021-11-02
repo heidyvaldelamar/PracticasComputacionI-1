@@ -28,7 +28,7 @@ class LibroDeCalificaciones{
         salidaCalificaciones();
 
         cout << setprecision(2) << fixed;
-        cout <<"\nEl promedio de la clase es "<<getPrtomedio()<<endl;
+        cout <<"\nEl promedio de la clase es "<<getPromedio()<<endl;
 
         salidaGrafica();
     }
