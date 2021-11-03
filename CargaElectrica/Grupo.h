@@ -7,7 +7,12 @@ author: SOFIA PALACIOS CUEVAS
 
 class Grupo{
     public:
+    ;
 
     private:
+    int main(){
+      Grupo miGrupo;
+    return 0;
+    }
 
 };
