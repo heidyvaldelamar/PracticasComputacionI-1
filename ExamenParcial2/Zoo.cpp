@@ -36,21 +36,32 @@ Código fuente funcional
 Captura de pantalla donde se demuestre el funcionamiento del proyecto.
 */
 
+
 int main(){
+    int numAninmales = 4;
     cout << "BIENVENIDO AL REGISTRO DEL ZOO" << endl;
     Animal miAnimal;
     string Nombre = "";
     float Peso = 0;
     int Tipo = 0;
     int NumeroDeJaula = 0;
-    cout << "Nombre del animal: ";
-    cin >> Nombre;
-    cout << "Peso del animal (kg): ";
-    cin >> Peso;
-    cout << "Tipo de animal (0 = presa, 1 = depredador): ";
-    cin >> Tipo;
-    cout << "# Jaula: ";
-    cin >> NumeroDeJaula;
+    array <int, numAninmales> animalTipo;
+    for (int i = 0; i < numAninmales; i++){
+        cout << "Nombre del animal: ";
+        cin >> miAnimal.setNombre();
+        cout << "Peso del animal (kg): ";
+        cin >> miAnimal.setPeso();
+        cout << "Tipo de animal (0 = presa, 1 = depredador): ";
+        cin >> miAnimal.setTipo();
+        cout << "Jaula: ";
+        cin >> miAnimal.setNumeroDeJaula();
+    }
+    
+    cout << "Peso promedio por tipo de animal: " <<endl;
+    cout << "Animales por tipo: " << endl;
+    cout << "Total de animales: " <<endl;
+    cout << "Animal: " << miAnimal.getNombre();
+    cout << "Jaula: " << miAnimal.getNumeroDeJaula() << endl;
 
 
 
@@ -58,7 +69,5 @@ int main(){
     return 0;
 }
 
-
-
-
+// g++ Zoo.cpp Metodos.cpp animal.h -o Zoo;.\Zoo
 
