@@ -23,7 +23,7 @@ class Grupo{
     ;
 
     private:
-    int main(){
+    int CrearGrupo(int i){
       Grupo miGrupo;
     return 0;
     }

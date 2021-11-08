@@ -12,9 +12,9 @@ author: SOFIA PALACIOS CUEVAS
 using namespace std;
 
 Grupo::Grupo(){
-      nombreGrupo = " ";
-      pkGrupo = 0;
-      cargaGrupo = 0;
+  string nombreGrupo = " ";
+  float pkGrupo = 0;
+  int cargaGrupo = 0;
 }
 string Grupo::GetNombreGrupo(){
   return nombreGrupo;
