@@ -25,35 +25,12 @@ Grupo::Grupo(string nombreGrupo, float pkGrupo, int cargaGrupo){
   charge = cargaGrupo;
 }
 
-// regresa la carga según el tipo de radical
+// regresa la carga según su relación (<,>) con el pH
 int Grupo::GetCarga(){
-  float pH;
-  float cargaMolecula;
-  
-   // hacemos uso de condicionales para cada grupo
-  if (name== "Carboxilo"){
-    if (pH < 2.16){
-      cargaMolecula = 0;
-    }
-    else{
-      cargaMolecula = -1;
-    }
-  }
-  if (name == "Amino"){
-    if (pH < 9.06){
-      cargaMolecula = 1;
-    }
-    else{
-      cargaMolecula = 0;
-    }
-  }
-  if (name == "R"){
-    if (pH < 10.54){
-      cargaMolecula = 1;
-    }
-    else{
-      cargaMolecula = 0;
-    }
-  }
-  return cargaMolecula;
-};
+
+  return charge;
+}
+
+float Grupo::GetPkr(){
+  return pkr;
+}

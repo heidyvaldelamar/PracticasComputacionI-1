@@ -77,21 +77,40 @@ void PedirpH(float& ph)
 template <typename grupos>
 int CalcularCargaApH(float& ph, grupos todosGrupos)
 {
-    const int numGrupos = 3;
+    int charge = 0;
     int cargaMolecula = 0;
-    for (int i = 0; i< todosGrupos.size(); i++)
-        cargaMolecula += todosGrupos[i].GetCarga();
-    return cargaMolecula;
+    for (int i = 0; i< todosGrupos.size(); i++){
+        
+        if(ph < todosGrupos[i].GetPkr()){
+            charge = todosGrupos[i].GetCarga() + 1;
+        }
 
+        if(ph > todosGrupos[i].GetPkr()){
+            charge = todosGrupos[i].GetCarga();
+        }
+
+        cargaMolecula += charge;
+    }
+    return cargaMolecula;
 }
 
 
 
 /*
 Grupos ionizables radicales "R"
-Hidroxilo -> OH -> O^- -> -1
-Tiol SH -> S^- -> -1
+R -> ? -> ? -> -1
 Amino -> NH2 -> NH3^+ -> +1
 Carboxilo -> COOH -> COO^- -> -1
 */
+
+/*
+      [H^+][A^-]
+kr = ------------
+        [HA]
+*/
+
+// si pkr < ph -> gana desproponada (A^-)
+// si pkr > ph -> gana protonada  (HA)
+
+
 
