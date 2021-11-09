@@ -94,3 +94,4 @@ Tiol SH -> S^- -> -1
 Amino -> NH2 -> NH3^+ -> +1
 Carboxilo -> COOH -> COO^- -> -1
 */
+

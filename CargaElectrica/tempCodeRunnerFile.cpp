@@ -1,0 +1,1 @@
+g++ CargaElectrica.cpp Grupo.cpp Grupo.h -o CargaElectrica; .\CargaElectrica
