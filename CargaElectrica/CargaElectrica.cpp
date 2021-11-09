@@ -79,7 +79,7 @@ int CalcularCargaApH(float& ph, grupos todosGrupos)
 {
     const int numGrupos = 3;
     int cargaMolecula = 0;
-    for (int i = 0; i< numGrupos; i++)
+    for (int i = 0; i< todosGrupos.size(); i++)
         cargaMolecula += todosGrupos[i].GetCarga();
     return cargaMolecula;
 

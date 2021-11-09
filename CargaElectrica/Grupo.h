@@ -9,29 +9,24 @@ author: SOFIA PALACIOS CUEVAS
 #define GRUPO_H
 
 # include <string>
-# include <array>
-# include <iostream>
-# include <iomanip>
+
 using namespace std;
 
 
 class Grupo{
-    public:
-    Grupo(); // constructor
-    Grupo(string& nombreGrupo, float pkGrupo, int cargaGrupo); // constructor con parámetros
-    float GetCarga();
-    string GetNombreGrupo();
-    ;
+  private:
+    string name; // nombre de nuestro grupo
+    float pkr; // potenciales de los radicales
+    int charge; // carga del radical   
 
-    private:
-    int CrearGrupo(int i){
-      Grupo miGrupo;
-    return 0;
-    }
-    string nombreGrupo;
-    float pkGrupo, pH;
-    int cargaGrupo, cargaMolecula;
+  public:
+    Grupo(string, float, int); // constructor con parámetros
+    Grupo(); // constructor
+
+    int GetCarga(); // recuperar la carga
+    float GetPkr(); // obtener el pk de los radicales
     
+  ;  
 
 };
 

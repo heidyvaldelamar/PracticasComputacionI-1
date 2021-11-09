@@ -5,26 +5,33 @@ author: SOFIA PALACIOS CUEVAS
 # include <string>
 # include <array>
 # include <iostream>
-# include <iomanip>
+
 
 #include "Grupo.h"
 
 using namespace std;
 
 Grupo::Grupo(){
-  string nombreGrupo = " ";
-  float pkGrupo = 0;
-  int cargaGrupo = 0;
+  name = " ";
+  pkr= 0;
+  charge = 0;
 }
 
+// le decimos que nuestras variables del constructor de arriba son
+// las mismas que las de las instrucciones del main
+Grupo::Grupo(string nombreGrupo, float pkGrupo, int cargaGrupo){
+  name = nombreGrupo;
+  pkr = pkGrupo;
+  charge = cargaGrupo;
+}
 
-string Grupo::GetNombreGrupo(){
-  return nombreGrupo;
-};
-
-float Grupo::GetCarga(){
-  float pH; // hacemos uso de condicionales para cada grupo
-  if (nombreGrupo == "Carboxilo"){
+// regresa la carga según el tipo de radical
+int Grupo::GetCarga(){
+  float pH;
+  float cargaMolecula;
+  
+   // hacemos uso de condicionales para cada grupo
+  if (name== "Carboxilo"){
     if (pH < 2.16){
       cargaMolecula = 0;
     }
@@ -32,7 +39,7 @@ float Grupo::GetCarga(){
       cargaMolecula = -1;
     }
   }
-  if (nombreGrupo == "Amino"){
+  if (name == "Amino"){
     if (pH < 9.06){
       cargaMolecula = 1;
     }
@@ -40,7 +47,7 @@ float Grupo::GetCarga(){
       cargaMolecula = 0;
     }
   }
-  if (nombreGrupo == "R"){
+  if (name == "R"){
     if (pH < 10.54){
       cargaMolecula = 1;
     }
