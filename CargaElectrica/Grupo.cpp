@@ -23,7 +23,7 @@ string Grupo::GetNombreGrupo(){
 };
 
 float Grupo::GetCarga(){
-  float pH;
+  float pH; // hacemos uso de condicionales para cada grupo
   if (nombreGrupo == "Carboxilo"){
     if (pH < 2.16){
       cargaMolecula = 0;

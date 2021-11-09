@@ -17,8 +17,8 @@ using namespace std;
 
 class Grupo{
     public:
-    Grupo();
-    Grupo(string& nombreGrupo, float pkGrupo, int cargaGrupo);
+    Grupo(); // constructor
+    Grupo(string& nombreGrupo, float pkGrupo, int cargaGrupo); // constructor con parámetros
     float GetCarga();
     string GetNombreGrupo();
     ;
