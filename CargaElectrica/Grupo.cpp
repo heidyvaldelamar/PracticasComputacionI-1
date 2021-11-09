@@ -16,6 +16,8 @@ Grupo::Grupo(){
   float pkGrupo = 0;
   int cargaGrupo = 0;
 }
+
+
 string Grupo::GetNombreGrupo(){
   return nombreGrupo;
 };

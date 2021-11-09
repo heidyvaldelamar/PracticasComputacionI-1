@@ -16,7 +16,7 @@ class Animal{
             Animal miAnimal;
             return 0;
         }
-        array <int, numAninmales> animalTipo;
+        array <int, 4> animalTipo;
     public:
         void setNombre(), setPeso(), setTipo(), setNumeroDeJaula();
         string getNombre();

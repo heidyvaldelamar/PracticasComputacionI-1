@@ -38,15 +38,15 @@ Captura de pantalla donde se demuestre el funcionamiento del proyecto.
 
 
 int main(){
-    int numAninmales = 4;
     cout << "BIENVENIDO AL REGISTRO DEL ZOO" << endl;
+    
     Animal miAnimal;
     string Nombre = "";
     float Peso = 0;
     int Tipo = 0;
     int NumeroDeJaula = 0;
     array <int, numAninmales> animalTipo;
-    for (int i = 0; i < numAninmales; i++){
+    for (int i = 0; i < 4; i++){
         cout << "Nombre del animal: ";
         cin >> miAnimal.setNombre();
         cout << "Peso del animal (kg): ";

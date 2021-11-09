@@ -18,6 +18,7 @@ using namespace std;
 class Grupo{
     public:
     Grupo();
+    Grupo(string& nombreGrupo, float pkGrupo, int cargaGrupo);
     float GetCarga();
     string GetNombreGrupo();
     ;
