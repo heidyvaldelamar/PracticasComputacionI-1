@@ -1,0 +1,92 @@
+// Heidy Valdelamar & Sofía Palacios Cuevas
+// PROYECTO DE UNIDAD 2 | COMPUTACIÓN I | UNAM - ENES JURIQUILLA
+// NOV 15, 2021
+
+/////////////////////// CALCULADORA BIOQUÍMICA /////////////////////
+
+#include <iostream>
+#include <cmath> // para log
+#include <array> // para arreglos
+#include <string> // para cadenas de caracteres
+
+// Headers
+#include "PH.h"
+
+using namespace std; // para simplificar sintaxis
+
+// Declaración de funciones
+char AskOp();
+void AskPh(float& ph);
+Group CreateGroup(int numGroups);
+// plantilla para pedir datos
+template <class temp> 
+    temp SetDatos (temp a){
+        cin >> a;
+        return 0;
+    }
+// plantilla para calcular cara a mol. a cierto pH
+template <typename groups>
+int CalculateCharge(float& ph, groups AllGroups);
+
+// función main
+int main(){
+    PH myPH; // instancia 'myPH' de la clase 'PH'
+    // Declaración de variables
+    float a,b,c, MolPh, GroupPka, GroupCharge, ph;
+    float temp1 = 0, temp2 = 0, temp3 = 0;
+    int MolCharge, numGroups;
+    char option;
+    string MolName, x;
+    array<PH, numGroups> AllGroups;
+
+    // Le pedimos al usuario elegir una opción
+    option = AskOp(); // la opción se elige con la fun. AksOp
+    switch (option) // Usamos un switch para que eliga
+    {
+        case '1': // Calcular el pH
+            cout << " Ingrese los siguientes datos: " <<endl; 
+            // Pedimos los datos necesarios
+            cout << "Molaridad de la sustancia agregada: ";
+            temp1 = SetDatos<float>(a); 
+            cout << "Volumen de la sustancia agregada (L):";
+            temp2 = SetDatos<float>(b);
+            cout << "Volumen del agua (L):";
+            temp3 = SetDatos<float>(c);
+             // Calculamos PH
+            myPH.CalcularPH(temp1,temp2,temp3);
+            break; // fin del case 1
+        case '2': // Sustancia Dominante
+            cout << "Ingrese los siguientes datos: "<<endl;
+            // Pedimos los datos necesarios
+            cout << "Constante de acidez de la sustancia (pka): ";
+            temp1 = SetDatos<float>(a);
+            cout << "pH: ";
+            temp2 = SetDatos<float>(b);
+            myPH.DominantSus(temp1, temp2); // Obtenemos sus. dominante
+            break; // fin del case 2
+        case '3': // Punto isoeléctrico
+            cout << "Ingrese los siguientes datos: "<<endl;
+            // Pedimos los datos necesarios
+            cout << "pka1: ";
+            temp1 = SetDatos<float>(a);
+            cout << "pka2: ";
+            temp2 = SetDatos<float>(b);
+            myPH.Isopoint(temp1, temp2); // Obtenemos PI          
+            break; // fin del case 3
+        case '4': // carga eléctrica
+            cout << "Nombre de la molecula: ";
+            // Nombramos la molécula
+            MolName = SetDatos<string>(x);
+            // Pedimos la info. de cada grupo
+            for(int i = 0; i < numGroups; i++)
+                AllGroups[i] = CreateGroups(i);
+            // Pedimos PH de la molecula
+            AskPh(MolPh);
+            // Calculamos la carga neta de mol. a cierto pH
+            int MolCharge = CalculateCharge(MolPh, AllGroups);
+            break; // fin del case 4
+    }
+    cout << "Resultado: " << myPH.GetResul();
+    return 0;
+}
+

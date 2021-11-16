@@ -5,7 +5,7 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 */
 
 // Clase PH
-
+# pragma
 class PH
 {
     public:
