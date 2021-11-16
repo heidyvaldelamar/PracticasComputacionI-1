@@ -23,6 +23,11 @@ Groups::Groups(string GroupName, float GroupPka, int GroupCharge){
     charge = GroupCharge;
 }
 
+float Groups::setValues(float x){
+    result = x;
+    return 0;
+}
+
 // Crea un nuevo 'Grupo' con la información ingresada por el usuario
 Groups CreateGroup(int i)
 {
@@ -39,6 +44,11 @@ Groups CreateGroup(int i)
     return myGroup;
 }
 
+Groups AskPh(float& ph){
+    cout << "ph del buffer: ";
+    cin >> ph;
+}
+
 // Regresa carga según su relación (<,>) con el pH
 int Groups::GetCarga(){
 
@@ -48,4 +58,31 @@ int Groups::GetCarga(){
 // Regresa pkr
 float Groups::GetPkr(){
   return pkr;
+}
+
+// Calcula y regresa la carga eléctrica de la molécula dependiendo de la
+// carga eléctrica de cada uno de sus grupos a un cierto pH.
+
+template <class groups>
+int CalcularCargaApH(float& ph, groups AllGroups)
+{
+    int charge = 0;
+    int MolCharge = 0;
+    for (int i = 0; i<AllGroups.size(); i++){
+        
+        if(ph <AllGroups[i].GetPkr()){
+            charge = AllGroups[i].GetCarga() + 1;
+        }
+
+        if(ph >AllGroups[i].GetPkr()){
+            charge = AllGroups[i].GetCarga();
+        }
+
+        result = MolCharge + charge;
+    }
+    return 0;
+}
+
+float Groups::GetResult(){
+    return result;
 }
