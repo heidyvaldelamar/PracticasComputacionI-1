@@ -1,6 +1,7 @@
 // Heidy Valdelamar & Sofía Palacios Cuevas
-
 // CLASE 'PH'
+# pragma
+
 #include <string>
 #include <array>
 

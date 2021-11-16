@@ -1,8 +1,10 @@
 // Heidy Valdelamar & Sofía Palacios Cuevas
-
 // CLASE 'Groups'
 # pragma
-# include <string>
+
+#include <string>
+#include <iostream>
+using namespace std;
 
 class Groups{
     private:
