@@ -11,6 +11,7 @@
 
 // Headers
 #include "PH.h"
+#include "Groups.h"
 
 using namespace std; // para simplificar sintaxis
 
@@ -24,20 +25,22 @@ template <class temp>
         cin >> a;
         return 0;
     }
-// plantilla para calcular cara a mol. a cierto pH
+// plantilla para calcular carga mol. a cierto pH
 template <typename groups>
 int CalculateCharge(float& ph, groups AllGroups);
 
 // función main
 int main(){
     PH myPH; // instancia 'myPH' de la clase 'PH'
+    Groups myG; // instnacia 'myG' de la clase Groups
     // Declaración de variables
+    const int numGroups = 3;
     float a,b,c, MolPh, GroupPka, GroupCharge, ph;
     float temp1 = 0, temp2 = 0, temp3 = 0;
     int MolCharge, numGroups;
     char option;
     string MolName, x;
-    array<PH, numGroups> AllGroups;
+    array<Groups, numGroups> AllGroups;
 
     // Le pedimos al usuario elegir una opción
     option = AskOp(); // la opción se elige con la fun. AksOp
@@ -86,7 +89,23 @@ int main(){
             int MolCharge = CalculateCharge(MolPh, AllGroups);
             break; // fin del case 4
     }
-    cout << "Resultado: " << myPH.GetResul();
+    cout << "Resultado: " << myPH.GetResul() || myG.GetResult() ;
     return 0;
 }
 
+char AskOp()
+{
+  char op;
+  do{
+    cout << "      Calculadora de Bioquimica      " << endl;
+    cout << "-------------------------------------" << endl <<endl;
+    cout << "Seleccione un procedimiento" << endl;
+    cout << "1 : Calcular pH" << endl;
+    cout << "2 : Especie con mayor presencia" << endl;
+    cout << "3 : Calcular punto isoelectrico" << endl;
+    cout << "4 : Calcular la carga neta de la molécula a un cierto PH"<< endl;
+    cout << "Procedimeinto elegido: ";
+    cin >> op;
+  }while (op != '1' && op !='2' && op !='3' && op !='4');
+  return op;
+}

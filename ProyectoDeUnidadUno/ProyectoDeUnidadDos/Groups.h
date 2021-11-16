@@ -8,13 +8,19 @@ using namespace std;
 
 class Groups{
     private:
+        int main(){
+            Groups myG;
+        return 0;
+        }
         string name; // nombre del grupo
-        float pkr; // potencial de los radicales
+        float pkr, result; // potencial de los radicales, resultado
         int charge; // carga del radical
+
     public:
         Groups(string, float, int); // constructor con parámetros
         Groups(); // constructor
 
+        float setValues(float x);
         int CreateGroup(); // creamos nuevo 'grupo'
         void AskPh(); // pedimos pH
         int CalculateCharge(); // Calcular carga a cierto pH
