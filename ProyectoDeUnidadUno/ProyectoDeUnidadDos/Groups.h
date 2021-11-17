@@ -22,7 +22,7 @@ class Groups{
 
         float setValues(float x);
         int CreateGroup(); // creamos nuevo 'grupo'
-        void AskPh(); // pedimos pH
+        void AskPh(float& ph); // pedimos pH
         int CalculateCharge(); // Calcular carga a cierto pH
         int GetCarga(); // recuperar la carga
         float GetPkr(); // recuperar pk de radicales

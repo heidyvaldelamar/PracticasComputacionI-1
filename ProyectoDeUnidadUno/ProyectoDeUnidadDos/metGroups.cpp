@@ -44,7 +44,7 @@ Groups CreateGroup(int i)
     return myGroup;
 }
 
-Groups AskPh(float& ph){
+void Groups::AskPh(float& ph){
     cout << "ph del buffer: ";
     cin >> ph;
 }
@@ -66,6 +66,7 @@ float Groups::GetPkr(){
 template <class groups>
 int CalcularCargaApH(float& ph, groups AllGroups)
 {
+    float result;
     int charge = 0;
     int MolCharge = 0;
     for (int i = 0; i<AllGroups.size(); i++){
