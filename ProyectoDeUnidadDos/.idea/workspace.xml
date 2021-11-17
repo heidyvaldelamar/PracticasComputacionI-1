@@ -11,7 +11,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fa580f9-eec6-4784-aedc-19f5f079db2f" name="Changes" comment="Listo :)" />
+    <list default="true" id="7fa580f9-eec6-4784-aedc-19f5f079db2f" name="Changes" comment="&quot;ProyectoDeUnidadUnoH&quot; Revisa si funciona igual">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637122016045</updated>
-      <workItem from="1637122017847" duration="4557000" />
+      <workItem from="1637122017847" duration="5189000" />
     </task>
     <task id="LOCAL-00001" summary="Listo :)">
       <created>1637126806643</created>
@@ -78,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637126806643</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;ProyectoDeUnidadUnoH&quot; Revisa si funciona igual">
+      <created>1637127286694</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637127286694</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +108,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Listo :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Listo :)" />
+    <MESSAGE value="&quot;ProyectoDeUnidadUnoH&quot; Revisa si funciona igual" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;ProyectoDeUnidadUnoH&quot; Revisa si funciona igual" />
   </component>
 </project>

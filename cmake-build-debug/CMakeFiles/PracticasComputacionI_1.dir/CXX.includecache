@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/heidyvaldelamar/CLionProjects/PracticasComputacionI-1/Ejercicios/OOP/Triangulo_main.cpp
+iostream
+-
+string
+-
+array
+-
+
