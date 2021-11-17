@@ -1,6 +1,6 @@
 /*
 */
-
+#pragma
 #include<iostream>
 #include<array>
 #include<vector>
@@ -33,9 +33,9 @@ int main(){
 int main(){
     vector<int> B(5); // vector vacio (falta metodo)
     cout << "El tamano de B es: " << B.size() <<endl;
-    imprimirVector(B);
+ //   imprimirVector(B);
     B.push_back(2);
-    imprimirVector(B);
+//imprimirVector(B);
 
     const int long n = 999999999;
     for(int i=0; i < n; i++){

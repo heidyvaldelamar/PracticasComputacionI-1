@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/heidyvaldelamar/CLionProjects/PracticasComputacionI-1/ProyectoDeUnidadUno/CalculadoraBioQuimica.cpp
+iostream
+-
+PH.h
+/Users/heidyvaldelamar/CLionProjects/PracticasComputacionI-1/ProyectoDeUnidadUno/PH.h
+
+/Users/heidyvaldelamar/CLionProjects/PracticasComputacionI-1/ProyectoDeUnidadUno/PH.h
+

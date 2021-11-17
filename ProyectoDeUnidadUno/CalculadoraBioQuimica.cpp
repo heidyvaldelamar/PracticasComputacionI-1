@@ -5,11 +5,11 @@ e-mail: sofiapalacioscuevas@comunidad.unam.mx
 */
 
 #include<iostream>
-#include<cmath>
-#include <array>
 
 // Headers
 #include "PH.h"
+
+#pragma
 
 using namespace std;
 
@@ -19,7 +19,7 @@ char AskOp();
 
 int main(){
   // Our Class Instance
-    PH myPH;
+    PH myPH{};
     // float x = 0, y = 0; <- DW / askValues()
     float temp1 = 0, temp2 = 0, temp3 = 0;
     char option;
@@ -76,4 +76,3 @@ char AskOp()
   return op;
 }
 
-//g++ CalculadoraBioQuimica.cpp Calculate.cpp PH.h -o CalculadoraBioQuimica;.\CalculadoraBioQuimica

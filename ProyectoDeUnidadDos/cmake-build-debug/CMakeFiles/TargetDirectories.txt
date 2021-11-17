@@ -1,0 +1,3 @@
+/Users/heidyvaldelamar/CLionProjects/PracticasComputacionI-1/ProyectoDeUnidadDos/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/heidyvaldelamar/CLionProjects/PracticasComputacionI-1/ProyectoDeUnidadDos/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/heidyvaldelamar/CLionProjects/PracticasComputacionI-1/ProyectoDeUnidadDos/cmake-build-debug/CMakeFiles/main.dir

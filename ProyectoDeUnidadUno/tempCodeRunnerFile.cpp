@@ -1,1 +1,0 @@
-g++ CalculadoraBioQuimica.cpp Calculate.cpp PH.h -o CalculadoraBioQuimica;.\CalculadoraBioQuimica

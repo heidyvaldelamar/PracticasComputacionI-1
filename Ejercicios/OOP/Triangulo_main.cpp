@@ -54,7 +54,7 @@ int main (){
        //Pedir datos al ususario de B y A
        double base, altura;
        cout << "Ingresa la base y altura del triangulo " << i << endl;
-       cin >> base >> altura
+       cin >> base >> altura;
        arrT[i].setBase(base);
        arrT[i].setAltura(altura);
        double currentArea = arrT[i].getArea();
