@@ -84,9 +84,9 @@ int main(){
             for(int i = 0; i < numGroups; i++)
                 AllGroups[i] = CreateGroup(i);
             // Pedimos PH de la molecula
-            AskPh(MolPh);
+            myG.AskPh(MolPh);
             // Calculamos la carga neta de mol. a cierto pH
-            int MolCharge = CalculateCharge(MolPh, AllGroups);
+            int CalcularCargaApH(float& ph, Groups AllGroups);
             break; // fin del case 4
     }
     cout << "Resultado: " << myPH.GetResult() || myG.GetResult() ;
