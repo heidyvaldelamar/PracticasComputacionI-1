@@ -18,7 +18,7 @@ using namespace std; // para simplificar sintaxis
 // Declaración de funciones
 char AskOp();
 void AskPh(float& ph);
-Group CreateGroup(int numGroups);
+Groups CreateGroup(int numGroups);
 // plantilla para pedir datos
 template <class temp> 
     temp SetDatos (temp a){
@@ -37,7 +37,7 @@ int main(){
     const int numGroups = 3;
     float a,b,c, MolPh, GroupPka, GroupCharge, ph;
     float temp1 = 0, temp2 = 0, temp3 = 0;
-    int MolCharge, numGroups;
+    int MolCharge;
     char option;
     string MolName, x;
     array<Groups, numGroups> AllGroups;
@@ -74,7 +74,7 @@ int main(){
             temp1 = SetDatos<float>(a);
             cout << "pka2: ";
             temp2 = SetDatos<float>(b);
-            myPH.Isopoint(temp1, temp2); // Obtenemos PI          
+            myPH.IsoPoint(temp1, temp2); // Obtenemos PI          
             break; // fin del case 3
         case '4': // carga eléctrica
             cout << "Nombre de la molecula: ";
@@ -82,14 +82,14 @@ int main(){
             MolName = SetDatos<string>(x);
             // Pedimos la info. de cada grupo
             for(int i = 0; i < numGroups; i++)
-                AllGroups[i] = CreateGroups(i);
+                AllGroups[i] = CreateGroup(i);
             // Pedimos PH de la molecula
             AskPh(MolPh);
             // Calculamos la carga neta de mol. a cierto pH
             int MolCharge = CalculateCharge(MolPh, AllGroups);
             break; // fin del case 4
     }
-    cout << "Resultado: " << myPH.GetResul() || myG.GetResult() ;
+    cout << "Resultado: " << myPH.GetResult() || myG.GetResult() ;
     return 0;
 }
 
